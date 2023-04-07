@@ -9,11 +9,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet var picker: UIPickerView!
     override func viewDidLoad() {
-        mapToken["iot-66937060046"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTA0LTAzVDE0OjA1OjMxKzA3OjAwIn0.fOMQYnePrzlcfaRTk_cvIoBsvzFYvTB9xNVqRCDbN8c";
-        mapToken["iot-66937060048"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDgiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTA0LTAzVDE0OjEwOjQwKzA3OjAwIn0.EY9mME-z5cf6HgPvQCyz-P1OUzYpQykzuK0S5qGeeaM";
-        mapToken["iot-66937060040"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDAiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTA0LTAzVDE0OjExOjM2KzA3OjAwIn0.tfMi45EuGlPlfViNSZpOLoRYxNAX6qly20bQKSjE7EY";
-        mapToken["iot-66937060042"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDIiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTA0LTAzVDE0OjEyOjE1KzA3OjAwIn0.hzC9KSBVu0mU5MS5GRrj-mgW-UuqnjCc2JNXAVIoPh8";
-        mapToken["iot-66937060045"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDUiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTA0LTAzVDE0OjEyOjUwKzA3OjAwIn0.2GV6aNZ0UtJAx0911hB52slYUaYseYKcv1isEhr_Bdw";
+        mapToken["iot-66937060046"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDY6NDkrMDc6MDAifQ.2KPeNvdWu5M8WiOAsZwguyi-wYxaAJe7B8BT1dn2HL0";
+        mapToken["iot-66937060048"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDc6MzUrMDc6MDAifQ.N3HYY_di5mqZz-TxxWx-q75Po1gH9O7y8cstuhCtcIA";
+        mapToken["iot-66937060040"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6MDMrMDc6MDAifQ.zD7W0sImTkhtoBp0bUmcLxSNHfPkRGonVHoVs9Tr9aI";
+        mapToken["iot-66937060042"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6MjcrMDc6MDAifQ.dhuY3e4gHx6_OWaFgCUDKOXNrEKGhsPuoOEnzhrPjjE";
+        mapToken["iot-66937060045"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6NTArMDc6MDAifQ.eXkxE9QOfOTDB8kw990XTnrytQowStECccXs9xLi1i4";
         mapToken["66659332061"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU0OjMyKzA3OjAwIn0.R4eHmEG4oP4pZnKl5bCZPdjDBkhkUzrCBdh1rVZKlJE"
         mapToken["66659332051"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU2OjIxKzA3OjAwIn0.f33Ing502a8_R9li5E7XJjLU4yOW4h-oKC0Girw-1Ug"
         mapToken["66937060046"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU3OjA0KzA3OjAwIn0.SJcZsrExTIqNwyzm6cn7CdpM1Vn_KMZdjnGbmZD_cQ0"
@@ -75,9 +75,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
          let channel = FlutterMethodChannel(name: "LIVING_NETWORK", binaryMessenger:flutterViewController.binaryMessenger)
         channel.setMethodCallHandler({
                     (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
-                      if(call.method == "open"){
-                          print(call.arguments)
-                      }
+            if(call.method == "open"){
+                print(call.arguments)
+            }
+            if(call.method == "close"){
+                print(call.arguments)
+                flutterViewController.dismiss(animated: true)
+                self.dismiss(animated: true, completion: nil)
+                result(nil)
+            }
 
                   })
          channel.invokeMethod("open", arguments: token )
