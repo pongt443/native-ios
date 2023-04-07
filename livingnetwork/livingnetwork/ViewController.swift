@@ -3,7 +3,7 @@ import Flutter
 import FlutterPluginRegistrant
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    let msisdn = ["iot-66937060046","iot-66937060048","iot-66937060040","iot-66937060042","iot-66937060045","66659332061","66659332051","66937060046","66937060048","QA1", "QA2", "QA3", "QA4", "QA5", "QA6", "QA7", "QA8", "QA9", "QA10","QA11", "QA12", "QA13", "QA14", "QA15", "QA16", "QA17", "QA18", "QA19","QA20","QA21", "QA22", "QA23", "QA24", "QA25", "QA26", "QA27", "QA28", "QA29", "QA30"]
+    let msisdn = ["iot-66937060046","iot-66937060048","iot-66937060040","iot-66937060042","iot-66937060045","QA1", "QA2", "QA3", "QA4", "QA5", "QA6", "QA7", "QA8", "QA9", "QA10","QA11", "QA12", "QA13", "QA14", "QA15", "QA16", "QA17", "QA18", "QA19","QA20","QA21", "QA22", "QA23", "QA24", "QA25", "QA26", "QA27", "QA28", "QA29", "QA30"]
     var mapToken = [String: String]()
     var token = "unknown"
     
@@ -14,10 +14,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         mapToken["iot-66937060040"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6MDMrMDc6MDAifQ.zD7W0sImTkhtoBp0bUmcLxSNHfPkRGonVHoVs9Tr9aI";
         mapToken["iot-66937060042"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6MjcrMDc6MDAifQ.dhuY3e4gHx6_OWaFgCUDKOXNrEKGhsPuoOEnzhrPjjE";
         mapToken["iot-66937060045"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDg6NTArMDc6MDAifQ.eXkxE9QOfOTDB8kw990XTnrytQowStECccXs9xLi1i4";
-        mapToken["66659332061"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU0OjMyKzA3OjAwIn0.R4eHmEG4oP4pZnKl5bCZPdjDBkhkUzrCBdh1rVZKlJE"
-        mapToken["66659332051"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU2OjIxKzA3OjAwIn0.f33Ing502a8_R9li5E7XJjLU4yOW4h-oKC0Girw-1Ug"
-        mapToken["66937060046"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU3OjA0KzA3OjAwIn0.SJcZsrExTIqNwyzm6cn7CdpM1Vn_KMZdjnGbmZD_cQ0"
-        mapToken["66937060048"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA2NTkzMzIwNjEiLCJuZXR3b3JrVHlwZSI6Ik1BU1MiLCJ0aW1lc3RhbXAiOiIyMDIzLTAzLTIzVDE0OjU3OjU1KzA3OjAwIn0.DO025Bzd27ZwVo72N5nyCDnq95qYs5wqa8XDbQNF3dQ"
         mapToken["QA1"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMSIsImlhdCI6MTUxNjIzOTAyMn0.dbYFJPSwNzNj-vPlexSW08gb6yP9q-6LSuFBz746TZE"
         mapToken["QA2"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMiIsImlhdCI6MTUxNjIzOTAyMn0.wZ8DmfL8ikHSpiJanN9IhzEEDTQ7Q2alkKiyNMgu64k"
         mapToken["QA3"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMyIsImlhdCI6MTUxNjIzOTAyMn0.MCIzx1QlGbLlYVW5GTn6FrL0gt9gWBhcckC_l1jgweE"
