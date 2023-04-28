@@ -3,17 +3,12 @@ import Flutter
 import FlutterPluginRegistrant
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    let msisdn = ["iot-66937060046","iot-66937060048","iot-66937060040","iot-66937060042","iot-66937060045","QA1", "QA2", "QA3", "QA4", "QA5", "QA6", "QA7", "QA8", "QA9", "QA10","QA11", "QA12", "QA13", "QA14", "QA15", "QA16", "QA17", "QA18", "QA19","QA20","QA21", "QA22", "QA23", "QA24", "QA25", "QA26", "QA27", "QA28", "QA29", "QA30"]
+    let msisdn = ["QA1", "QA2", "QA3", "QA4", "QA5", "QA6", "QA7", "QA8", "QA9", "QA10","QA11", "QA12", "QA13", "QA14", "QA15", "QA16", "QA17", "QA18", "QA19","QA20","QA21", "QA22", "QA23", "QA24", "QA25", "QA26", "QA27", "QA28", "QA29", "QA30"]
     var mapToken = [String: String]()
     var token = "unknown"
-    
+    lazy var flutterEngine = FlutterEngine(name: "flutter_engine")
     @IBOutlet var picker: UIPickerView!
     override func viewDidLoad() {
-        mapToken["iot-66937060046"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDYiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDdUMTE6MDY6NDkrMDc6MDAifQ.2KPeNvdWu5M8WiOAsZwguyi-wYxaAJe7B8BT1dn2HL0";
-        mapToken["iot-66937060048"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDgiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDhUMTc6MDA6MjUrMDc6MDAifQ.JZxlFxd_XmamtCqE29RsjscwXIzGHH1SEJm3yNTeqzw";
-        mapToken["iot-66937060040"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDAiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDhUMTc6MDQ6MjUrMDc6MDAifQ.sgYbfiCCzqtT23q4dSA-xomuGMRSUDmnWCQlBdi_wxQ";
-        mapToken["iot-66937060042"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDIiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDhUMTc6MDU6MjUrMDc6MDAifQ.e54cNGxPNvsG7FU9Dq4qZTSdjoxYKWN4pkIJv0awtbg";
-        mapToken["iot-66937060045"] = "eyJhbGciOiJIUzI1NiJ9.eyJtb2JpbGVObyI6IjA5MzcwNjAwNDUiLCJuZXR3b3JrVHlwZSI6IkNQSSIsInRpbWVzdGFtcCI6IjIwMjMtMDQtMDhUMTc6MTU6MjIrMDc6MDAifQ.3yNQy4nfx4r7lfR7Vxe31AuYhEH0PnH2qz7vXIE9ON0";
         mapToken["QA1"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMSIsImlhdCI6MTUxNjIzOTAyMn0.dbYFJPSwNzNj-vPlexSW08gb6yP9q-6LSuFBz746TZE"
         mapToken["QA2"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMiIsImlhdCI6MTUxNjIzOTAyMn0.wZ8DmfL8ikHSpiJanN9IhzEEDTQ7Q2alkKiyNMgu64k"
         mapToken["QA3"] = "5GeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlFBMyIsImlhdCI6MTUxNjIzOTAyMn0.MCIzx1QlGbLlYVW5GTn6FrL0gt9gWBhcckC_l1jgweE"
@@ -65,7 +60,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return  msisdn[row]
     }
     
-    lazy var flutterEngine = FlutterEngine(name: "flutter_engine")
     @objc func invokeFlutter(){
          let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil);
          let channel = FlutterMethodChannel(name: "LIVING_NETWORK", binaryMessenger:flutterViewController.binaryMessenger)
